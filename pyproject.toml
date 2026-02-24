@@ -7,7 +7,7 @@ name = "langchain-hana-retriever"
 version = "0.1.0"
 description = "LangChain BM25 and hybrid retrievers for SAP HANA Cloud"
 readme = "README.md"
-license = {text = "MIT"}
+license = "MIT"
 requires-python = ">=3.10"
 authors = [
     {name = "David Diaz"},
