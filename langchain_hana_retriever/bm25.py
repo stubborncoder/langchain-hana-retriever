@@ -45,7 +45,7 @@ class HANABm25Retriever(BaseRetriever):
         columns = [self.content_column] + self.metadata_columns
         col_list = ", ".join(columns)
         where_clauses = [
-            f"LOCATE(TO_NVARCHAR({self.content_column}), ?) > 0" for _ in tokens
+            f"LOCATE(LOWER(TO_NVARCHAR({self.content_column})), ?) > 0" for _ in tokens
         ]
         where_sql = " OR ".join(where_clauses)
         sql = (
